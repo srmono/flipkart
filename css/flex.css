@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navcontainer{
+     display: flex;
+     background-color: rgb(18, 59, 45);
+     padding: 10px;
+     margin: 10px;
+     font-size: 28px;
+     /* flex-direction:column-reverse */
+     /* flex-wrap: wrap; */
+     flex-flow: row wrap;
+     justify-content: space-between;
+}
+
+#navcontainer .navItem{
+    background-color: aliceblue;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+
+

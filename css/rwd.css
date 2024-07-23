@@ -1,0 +1,24 @@
+/*css reset*/
+
+/*common styles*/
+#main{
+    background-color: brown;
+}
+/*common styles ends here*/
+
+@media only screen and (max-width: 1000px) {
+    #main{
+        background-color: rgb(212, 244, 124);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #main{
+        background-color:blueviolet
+    }
+}
+
+
+/*mobile*/
+/*desktop*/
+/*laptop*/
