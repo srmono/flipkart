@@ -1,0 +1,14 @@
+Replace localhost with your local system IP Address to make api call. In android device localhost refers device not the localhost of your system. 
+
+
+Ex:-  
+
+http://localhost:3000/register
+
+to
+
+http://192.168.1.39:3000/register
+
+http:/{your-system-ip}:3000/register
+
+

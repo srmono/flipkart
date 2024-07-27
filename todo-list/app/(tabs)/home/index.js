@@ -1,7 +1,25 @@
-import { Pressable, StyleSheet, Text, View, ScrollView, TextInput, ViewBase } from 'react-native'
-import React, {useState} from 'react'
-import { useRouter } from 'expo-router'
-import moment from 'moment';
+import {
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  ViewBase,
+} from "react-native";
+import React, { useState, useEffect } from "react";
+import { AntDesign, Feather } from "@expo/vector-icons";
+import { BottomModal } from "react-native-modals";
+import { ModalTitle, ModalContent } from "react-native-modals";
+import { SlideAnimation } from "react-native-modals";
+import { Entypo, FontAwesome } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import axios from "axios";
+import { MaterialIcons } from "@expo/vector-icons";
+
+import moment from "moment";
+import { useRouter } from "expo-router";
 
 const index = () => {
     const router = useRouter;
@@ -49,7 +67,7 @@ const index = () => {
           };
     
           axios
-            .post("http://localhost:3000/todos/6583eea7c5bc35503ef0f5ae", todoData)
+            .post("http://192.168.1.39:3000/todos/6583eea7c5bc35503ef0f5ae", todoData)
             .then((response) => {
               console.log(response);
             })
@@ -73,7 +91,7 @@ const index = () => {
       const getUserTodos = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:3000/users/6583eea7c5bc35503ef0f5ae/todos`
+            `http://192.168.1.39:3000/users/6583eea7c5bc35503ef0f5ae/todos`
           );
     
           console.log(response.data.todos);
@@ -99,7 +117,7 @@ const index = () => {
         try {
           setMarked(true);
           const response = await axios.patch(
-            `http://localhost:3000/todos/${todoId}/complete`
+            `http://192.168.1.39:3000/todos/${todoId}/complete`
           );
           console.log(response.data);
         } catch (error) {

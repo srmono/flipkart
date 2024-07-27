@@ -29,7 +29,7 @@ const register = () => {
           password:password
       }
 
-      axios.post("http://localhost:3000/register",user).then((response) => {
+      axios.post("http://192.168.1.39:3000/register",user).then((response) => {
           console.log(response);
           Alert.alert("Registration successfull","You have been registered succesfully");
 
